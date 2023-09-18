@@ -62,7 +62,7 @@ def win(nice,mean,name):
     #Subsitute the {} wildcards with our variable values
     print("\nNice Job {}, you win! \nEveryone loves you and you \nbecome president of the world!".format(name))
     #call again function and pass in our variables
-    again(nice,mean,name)
+    again(nice,mean,name)s
 
 def lose(nice,mean,name):
     #substitute the {} wildcards without variable values
