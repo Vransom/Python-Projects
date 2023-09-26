@@ -67,22 +67,23 @@ class ParentWindow(Frame):
     #Creates function to transfer files from one directory to another
     def transferFiles(self):
         #gets source directory
-        source=self.source_dir.get()
+        source = self.source_dir.get()
         #gets destination directory
-        destination=self.destination_dir.get()
+        destination = self.destination_dir.get()
         #gets a list of files in the source directory
-        source_files=os.listdir(source)
+        source_files = os.listdir(source)
         #runs through each file in the source directory
         for i in source_files:
-            mtime=os.path.getmtime(source)
-            currenttime=datetime.datetime.now()
-
-            daylimithours=mtime + timedelta(days=1)
+            filepath = os.path.join(source,i)
+            oneDayAgo = datetime.datetime.now() - timedelta(hours = 24)
             
-            if modifyDateLimit>currenttime:        
+            mtime = os.path.getmtime(filepath)
+            fileDateTime = datetime.datetime.fromtimestamp(mtime)
+            
+            if oneDayAgo < fileDateTime:        
             #moves each file from the source to the destination
-                shutil.move(source + '/'+i, destination)
-                print(i+ ' was successfully transferred.')
+                shutil.move(source + '/' + i, destination)
+                print(i + ' was successfully transferred.')
 
     #creates function to exit program
     def exit_program(self):
