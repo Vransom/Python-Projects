@@ -74,16 +74,16 @@ class ParentWindow(Frame):
         source_files = os.listdir(source)
         #runs through each file in the source directory
         for i in source_files:
-            filepath = os.path.join(source, i)
+            filepath = os.path.join(source,i)
             oneDayAgo = datetime.datetime.now() - timedelta(hours = 24)
-
-            mtime=os.path.getmtime(filepath)
+            
+            mtime = os.path.getmtime(filepath)
             fileDateTime = datetime.datetime.fromtimestamp(mtime)
             
-            if oneDayAgo > fileDateTime:        
+            if oneDayAgo < fileDateTime:        
             #moves each file from the source to the destination
-                shutil.move(source + '/'+i, destination)
-                print(i+ ' was successfully transferred.')
+                shutil.move(source + '/' + i, destination)
+                print(i + ' was successfully transferred.')
 
     #creates function to exit program
     def exit_program(self):
