@@ -3,9 +3,9 @@ These are basic projects I have completed written in Python. I have utilized tki
 
 <h1>Projects</h1>
   <p><ul>
-    <li><a href="https://github.com/Vransom/HTML-and-CSS-projects/blob/main/Space%20Station%20Project/Index.html">Checkbook</a></li>
-    <li><a href="https://github.com/Vransom/HTML-and-CSS-projects/blob/main/bootstrap4_project/academy_cinemas.html">University Site</a></li>
-    <li><a href="https://github.com/Vransom/HTML-and-CSS-projects/blob/main/One-Page%20Website/one_page_website.html">File Transfer Application</li>
+    <li><a href="https://github.com/Vransom/Python-Projects/tree/main/DjangoCheckbook">Checkbook</a></li>
+    <li><a href="https://github.com/Vransom/Python-Projects/tree/main/DjangoUniversity">University Site</a></li>
+    <li><a href="https://github.com/Vransom/Python-Projects/tree/main/File%20Transfer">File Transfer Application</li>
   </ul></p>
 
 <h2>Checkbook</h2>
