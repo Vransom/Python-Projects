@@ -5,7 +5,7 @@ from .models import Account, Transaction
 class AccountForm(ModelForm):
     class Meta:
         model = Account
-        fields= '__all__'
+        fields = '__all__'
 
 
 #creates transaction form based on Transaction Model

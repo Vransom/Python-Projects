@@ -9,7 +9,7 @@ def home(request):
     if request.method == 'POST':
         pk = request.POST['account'] #if the form is submitted, retrieve which account the user wants to view
         return balance(request, pk) #call balance function to render that account's balance sheet
-    content = {'form':form} #pass the content to the template in a dictionary
+    content = {'form': form} #pass the content to the template in a dictionary
     #adds content of form to page
     return render(request, 'checkbook/index.html', content)
 
